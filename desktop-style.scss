@@ -3,47 +3,17 @@ body {
     background: url("backgrounds/hello Red.jpeg");
     background-size: cover;
     background-position: center;
-    position: absolute;
-    background-attachment: fixed;
-   
+    overflow: hidden;
+    width: 98vw;
+    height: 100vh;
+    max-width: 100%;
 }
 
 
 #mainWindow {
     display: flex;
-    width: 1000px;
     height: 750px;
-    margin: auto;
+    margin: 0 auto;
+    
 }
 
-#navBar {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    height: fit-content;
-    width: 4000px;
-    outline: 2px solid red;
-    justify-content: space-between;
-}
-
-.nav-options {
-    outline: 2px solid black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-li {
-    display: inline-block;
-}
-
-.icon {
-    width: 15px;
-    height: 15px;
-}

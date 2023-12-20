@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=å, initial-scale=1.0">
     <title>Desktop</title>
     <link rel="stylesheet" href="desktop-style.css">
+    <link rel="stylesheet" href="nav-style.css">
 </head>
 <body>
     <div id="mainWindow" class="window">
-zZ2        <nav id="navBar" class="nav-bar">
+        <nav id="navBar" class="nav-bar">
             <div id="textNavOptions" class="nav-options">
-                <ul id="textNav__list">
+                <ul id="textNav__list" class="flex-list">
                     <li><img class="icon" src="icons/Apple.png" ></li>
                     <li>Finder</li>
                     <li>File</li>
@@ -23,7 +24,7 @@ zZ2        <nav id="navBar" class="nav-bar">
                 </ul>
             </div>
             <div id="iconNavOptions" class="nav-options">
-                <ul id="iconNav__list">
+                <ul id="iconNav__list" class="flex-list">
                     <li><img class="icon" src="icons/speaker.3.fill.png"></li>
                     <li><img class="icon" src="icons/battery.100.png"></li>
                     <li><img class="icon" src="icons/wifi.png"></li>
@@ -32,6 +33,15 @@ zZ2        <nav id="navBar" class="nav-bar">
                 </ul>
             </div>
         </nav>
+        <div class="dock-bg">
+            <div class="dock">
+                <img src="icons/finder.png" alt="finder">
+                <img src="icons/notes.png" alt="notes">
+                <img src="icons/terminal.png" alt="terminal">
+                <img src="icons/facetime.png" alt="facetime">
+                <img src="icons/calculator.png" alt="calculator">
+            </div>
+        </div>
     </div>
     
 </body>
