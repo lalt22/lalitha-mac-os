@@ -1,0 +1,37 @@
+#navBar {
+    display: flex;
+    flex-direction: row;
+    width: 100rem;
+    background-color: #ffe6e7;
+    height: fit-content;
+    justify-content: space-between;
+    align-self: flex-start;
+    margin: 0;
+}
+
+.nav-options {
+    display: flex;
+    flex-direction: row;
+    width: 33.3rem;
+}
+
+.flex-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 3px;
+}
+
+#iconNavOptions {
+    justify-content: flex-end;
+}
+
+li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+}

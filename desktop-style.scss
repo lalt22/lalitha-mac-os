@@ -1,0 +1,21 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: url("backgrounds/hello Red.jpeg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    width: 98vw;
+    height: 100vh;
+    max-width: 100%;
+}
+
+
+#mainWindow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 750px;
+    margin: 0 auto;
+    
+}
+
