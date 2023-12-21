@@ -1,7 +1,7 @@
 #navBar {
   display: flex;
   flex-direction: row;
-  width: 100rem;
+  width: 89rem;
   background-color: #ffe6e7;
   height: fit-content;
   justify-content: space-between;
