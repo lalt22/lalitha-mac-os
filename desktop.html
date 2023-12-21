@@ -7,41 +7,48 @@
     <title>Desktop</title>
     <link rel="stylesheet" href="desktop-style.css">
     <link rel="stylesheet" href="nav-style.css">
+    <link rel="stylesheet" href="dock-style.css">
 </head>
 <body>
     <div id="mainWindow" class="window">
-        <nav id="navBar" class="nav-bar">
-            <div id="textNavOptions" class="nav-options">
-                <ul id="textNav__list" class="flex-list">
-                    <li><img class="icon" src="icons/Apple.png" ></li>
-                    <li>Finder</li>
-                    <li>File</li>
-                    <li>Edit</li>
-                    <li>View</li>
-                    <li>Go</li>
-                    <li>Window</li>
-                    <li>Help</li>
-                </ul>
-            </div>
-            <div id="iconNavOptions" class="nav-options">
-                <ul id="iconNav__list" class="flex-list">
-                    <li><img class="icon" src="icons/speaker.3.fill.png"></li>
-                    <li><img class="icon" src="icons/battery.100.png"></li>
-                    <li><img class="icon" src="icons/wifi.png"></li>
-                    <li><img class="icon" src="icons/magnifyingglass.png"></li>
-                    <li><img class="icon" src="icons/controlcenter.png"></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="container">
+            <nav id="navBar" class="nav-bar">
+                <div id="textNavOptions" class="nav-options">
+                    <ul id="textNav__list" class="flex-list">
+                        <li><img class="icon" src="icons/Apple.png" ></li>
+                        <li>Finder</li>
+                        <li>File</li>
+                        <li>Edit</li>
+                        <li>View</li>
+                        <li>Go</li>
+                        <li>Window</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+                <div id="iconNavOptions" class="nav-options">
+                    <ul id="iconNav__list" class="flex-list">
+                        <li><img class="icon" src="icons/speaker.3.fill.png"></li>
+                        <li><img class="icon" src="icons/battery.100.png"></li>
+                        <li><img class="icon" src="icons/wifi.png"></li>
+                        <li><img class="icon" src="icons/magnifyingglass.png"></li>
+                        <li><img class="icon" src="icons/controlcenter.png"></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <div class="dock-bg">
             <div class="dock">
-                <img src="icons/finder.png" alt="finder">
-                <img src="icons/notes.png" alt="notes">
-                <img src="icons/terminal.png" alt="terminal">
-                <img src="icons/facetime.png" alt="facetime">
-                <img src="icons/calculator.png" alt="calculator">
+                <img src="icons/finder.png" alt="finder" class="finder-btn btn">
+                <img src="icons/notes.png" alt="notes" class="notes-btn btn">
+                <img src="icons/terminal.png" alt="terminal" class="terminal-btn btn">
+                <img src="icons/facetime.png" alt="facetime" class="facetime-btn btn">
+                <img src="icons/calculator.png" alt="calculator" class="calculator-btn btn">
             </div>
         </div>
+    </div>
+
+    <div id="calculatorModal" class="modal">
+
     </div>
     
 </body>
