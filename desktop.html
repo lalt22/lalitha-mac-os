@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="desktop-style.css">
     <link rel="stylesheet" href="nav-style.css">
     <link rel="stylesheet" href="dock-style.css">
+    <link rel="stylesheet" href="modal-style.css">
+    <script src="./scripts/openApp.js"></script>
+    <script src="./scripts/closeApp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./scripts/drag.js"></script>
+    <script src="./scripts/setDateAndTime.js"></script>
 </head>
 <body>
     <div id="mainWindow" class="window">
@@ -32,24 +39,115 @@
                         <li><img class="icon" src="icons/wifi.png"></li>
                         <li><img class="icon" src="icons/magnifyingglass.png"></li>
                         <li><img class="icon" src="icons/controlcenter.png"></li>
+                        <li id="datetime"></li>
                     </ul>
                 </div>
             </nav>
         </div>
         <div class="dock-bg">
             <div class="dock">
-                <img src="icons/finder.png" alt="finder" class="finder-btn btn">
-                <img src="icons/notes.png" alt="notes" class="notes-btn btn">
-                <img src="icons/terminal.png" alt="terminal" class="terminal-btn btn">
-                <img src="icons/facetime.png" alt="facetime" class="facetime-btn btn">
-                <img src="icons/calculator.png" alt="calculator" class="calculator-btn btn">
+                <ul id="dock__list" class="flex-list">
+                    <li id="finder">
+                        <a href="#finder" id="finderBtn" class="finder-btn btn" onclick="openFinder()">
+                            <em><span>Finder</span></em>
+                            <img src="icons/finder.png" alt="finder">
+                        </a>
+                    </li>
+                    <li id="notes">
+                        <a href="#notes" id="notesBtn" class="notes-btn btn" onclick="openNotes()">
+                            <em><span>Notes</span></em>
+                            <img src="icons/notes.png" alt="notes">
+                        </a>
+                    </li>
+                    <li id="terminal">
+                        <a href="#terminal" id="terminalBtn" class="terminal-btn btn" onclick="openTerminal()">
+                            <em><span>Terminal</span></em>
+                            <img src="icons/terminal.png" alt="terminal">
+                        </a>
+                    </li>
+                    <li id="facetime">
+                        <a href="#facetime" id="facetimeBtn" class="facetime-btn btn" onclick="openFaceTime()">
+                            <em><span>FaceTime</span></em>
+                            <img src="icons/facetime.png" alt="facetime">
+                        </a>
+                    </li>
+                    <li id="calculator">
+                        <a href="#calculator" id="calculatorBtn" class="calculator-btn btn" onclick="openCalculator()">
+                            <em><span>Calculator</span></em>
+                            <img src="icons/calculator.png" alt="calculator">
+                        </a>
+                    </li>
+                    
+                </ul>
+                
             </div>
         </div>
+
+        <div id="finderModal" class="modal ui-draggable">
+            <div class="modal-bar">
+                <div class="control-buttons">
+                    <a href="#finderModal" class="close" onclick="closeFinder()">close</a>
+                    <a href="#" class="minimise">minimise</a>
+                    <a href="#" class="fullScreen">fullscreen</a>
+                </div>
+                <h1 id="finderTitle" class="title">Finder</h1>
+            </div>
+        </div> 
+    
+        <div id="notesModal" class="modal ui-draggable">
+            <div class="modal-bar">
+                <div class="control-buttons">
+                    <a href="#notesModal" class="close" onclick="closeNotes()">close</a>
+                    <a href="#" class="minimise">minimise</a>
+                    <a href="#" class="fullScreen">fullscreen</a>
+                </div>
+                <h1 id="notesTitle" class="title">Notes</h1>
+            </div>
+            <div class="notes-content">
+                <textarea id="notesTextArea" name="notecontent" rows="4" cols="50"></textarea>
+            </div>
+        </div>
+    
+        <div id="terminalModal" class="modal ui-draggable">
+            <div class="modal-bar">
+                <div class="control-buttons">
+                    <a href="#terminalModal" class="close" onclick="closeTerminal()">close</a>
+                    <a href="#" class="minimise">minimise</a>
+                    <a href="#" class="fullScreen">fullscreen</a>
+                </div>
+                <h1 id="terminalTitle" class="title">Terminal</h1>
+            </div>
+            
+        </div>
+    
+        <div id="facetimeModal" class="modal ui-draggable">
+            <div class="modal-bar">
+                <div class="control-buttons">
+                    <a href="#facetimeModal" class="close" onclick="closeFaceTime()">close</a>
+                    <a href="#" class="minimise">minimise</a>
+                    <a href="#" class="fullScreen">fullscreen</a>
+                </div>
+                <h1 id="facetimeTitle" class="title">FaceTime</h1>
+            </div>
+        </div>
+    
+    
+        <div id="calculatorModal" class="modal ui-draggable">
+            <div class="modal-bar">
+                <div class="control-buttons">
+                    <a href="#calculatorModal" class="close" onclick="closeCalculator()">close</a>
+                    <a href="#" class="minimise">minimise</a>
+                    <a href="#" class="fullScreen">fullscreen</a>
+                </div>
+                <h1 id="calculatorTitle" class="title">Calculator</h1>
+            </div>
+            <div class="modal-content"></div>
+            
+        </div> 
+        
     </div>
 
-    <div id="calculatorModal" class="modal">
-
-    </div>
+   
     
 </body>
 </html>
