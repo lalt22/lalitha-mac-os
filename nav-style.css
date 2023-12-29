@@ -1,9 +1,12 @@
 #navBar {
   display: flex;
   flex-direction: row;
-  width: 100rem;
+  visibility: visible;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
   background-color: #ffe6e7;
-  height: fit-content;
+  height: 21px;
   justify-content: space-between;
   align-self: flex-start;
   margin: 0;
@@ -34,4 +37,8 @@ li {
 .icon {
   width: 15px;
   height: 15px;
+}
+
+#iconNavOptions {
+  margin-right: 10px;
 }

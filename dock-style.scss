@@ -1,3 +1,5 @@
+@use "./partials/dock-mixins";
+
 .dock-bg {
     height: 4rem;
     padding:  0 1rem;
@@ -8,8 +10,10 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     display: flex;
     justify-content: center;
-    justify-self: flex-end;
     align-self: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 9999;
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
@@ -24,17 +28,45 @@
     justify-content: center;
     align-items: center;
 
+    & li {
+        transition: 250ms all ease-in-out;
+        &:hover {
+            transform: translateY(-1rem);
+            & em {
+                @include dock-mixins.show__em;
+            }
+        }
+    }
+    & em {
+        display: none;
+        position: absolute;
+        top: -34px;
+        display: none;
+        width: 60px;
+        margin-left: 0px;
+        text-align: center;
+        font-style:normal;
+        font-weight: lighter;
+        font-size:12px;
+        color:#000;
+        text-shadow:0 1px 1px #000;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 10px;
+    }
+
     & img {
         height: calc(3rem * var(--scale));
         width: calc(3rem * var(--scale));
         top: calc(3rem * var(--scale) - 3rem)/-2;
         position: relative;
-        transition: 250ms all ease-in-out;
-
-        &:hover {
-            transform: translateY(-1rem);
-        }
-
 
     }
+}
+
+#dock__list {
+    margin: 0px;
 }
