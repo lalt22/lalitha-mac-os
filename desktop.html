@@ -14,6 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./scripts/drag.js"></script>
+    <script src="./scripts/setDateAndTime.js"></script>
 </head>
 <body>
     <div id="mainWindow" class="window">
@@ -38,6 +39,7 @@
                         <li><img class="icon" src="icons/wifi.png"></li>
                         <li><img class="icon" src="icons/magnifyingglass.png"></li>
                         <li><img class="icon" src="icons/controlcenter.png"></li>
+                        <li id="datetime"></li>
                     </ul>
                 </div>
             </nav>
@@ -101,6 +103,9 @@
                 </div>
                 <h1 id="notesTitle" class="title">Notes</h1>
             </div>
+            <div class="notes-content">
+                <textarea id="notesTextArea" name="notecontent" rows="4" cols="50"></textarea>
+            </div>
         </div>
     
         <div id="terminalModal" class="modal ui-draggable">
@@ -121,7 +126,7 @@
                     <a href="#facetimeModal" class="close" onclick="closeFaceTime()">close</a>
                     <a href="#" class="minimise">minimise</a>
                     <a href="#" class="fullScreen">fullscreen</a>
-                </nav>
+                </div>
                 <h1 id="facetimeTitle" class="title">FaceTime</h1>
             </div>
         </div>

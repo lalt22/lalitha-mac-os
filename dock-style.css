@@ -61,3 +61,7 @@
   top: calc(3rem * var(--scale) - 3rem)/-2;
   position: relative;
 }
+
+#dock__list {
+  margin: 0px;
+}
