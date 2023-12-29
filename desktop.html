@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=å, initial-scale=1.0">
     <title>Desktop</title>
-    <link rel="stylesheet" href="desktop-style.css">
-    <link rel="stylesheet" href="nav-style.css">
-    <link rel="stylesheet" href="dock-style.css">
-    <link rel="stylesheet" href="modal-style.css">
+    <link rel="stylesheet" href="./styles/desktop-style.css">
+    <link rel="stylesheet" href="./styles/nav-style.css">
+    <link rel="stylesheet" href="./styles/dock-style.css">
+    <link rel="stylesheet" href="./styles/modal-style.css">
+    <link rel="stylesheet" href="./styles/notes-style.css">
+    <link rel="stylesheet" href="./styles/terminal-style.css">
     <script src="./scripts/openApp.js"></script>
     <script src="./scripts/closeApp.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./scripts/drag.js"></script>
     <script src="./scripts/setDateAndTime.js"></script>
+    <script src="./scripts/notes.js"></script>
 </head>
 <body>
     <div id="mainWindow" class="window">
@@ -39,7 +42,7 @@
                         <li><img class="icon" src="icons/wifi.png"></li>
                         <li><img class="icon" src="icons/magnifyingglass.png"></li>
                         <li><img class="icon" src="icons/controlcenter.png"></li>
-                        <li id="datetime"></li>
+                        <li id="datetime" class="datetime"></li>
                     </ul>
                 </div>
             </nav>
@@ -103,10 +106,59 @@
                 </div>
                 <h1 id="notesTitle" class="title">Notes</h1>
             </div>
-            <div class="notes-content">
-                <textarea id="notesTextArea" name="notecontent" rows="4" cols="50"></textarea>
+            <div class="modal-content">    
+                <div class="notes">
+                    <div class="header">
+                        <div class="upper search"></div>
+                        <div class="lower search">
+                            <input type="search" id="searchform" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="note-list">
+                        <ul class="list">
+                            <a href="#" class="note selected">
+                                <p class="title">Note1</p>
+                                <p class="day">Yesterday</p>
+                            </a>
+                               
+                            <a href="#" class="note">
+                                <p class="title">New Note</p>
+                                <p class="day">16/12/22</p>
+                            </a>
+                           
+                            <a href="#" class="note">
+                                <p class="title">Memo</p>
+                                <p class="day">16/12/22</p>
+                            </a>
+                            
+                            <a href="#" class="note">
+                                <p class="title">New Note</p>
+                                <p class="day">6/11/18</p>
+                            </a>
+                            
+                            <a href="#" class="note">
+                                <p class="title">New Note</p>
+                                <p class="day">16/12/22</p>
+                            </a>
+                    
+                            <a href="#" class="note">
+                                <p class="title">New Note</p>
+                                <p class="day">16/12/22</p>
+                            </a>
+    
+                            <a href="#" class="note">
+                                <p class="title">New Note</p>
+                                <p class="day">16/12/22</p>
+                            </a>
+                        </ul>
+                    </div>
+                </div>        
+                <div class="notepad">
+                    <textarea class="textarea" contenteditable="true"></textarea>
+                </div>
             </div>
         </div>
+
     
         <div id="terminalModal" class="modal ui-draggable">
             <div class="modal-bar">
@@ -117,7 +169,9 @@
                 </div>
                 <h1 id="terminalTitle" class="title">Terminal</h1>
             </div>
-            
+            <div class="terminal-content">
+                <textarea class="terminal-area" name="terminal-area"></textarea>
+            </div>
         </div>
     
         <div id="facetimeModal" class="modal ui-draggable">
