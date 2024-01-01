@@ -1,3 +1,5 @@
+@use "./partials/modal-mixins";
+
 .modal {
     display: none;
     position: fixed;
@@ -61,4 +63,62 @@
     margin-top: 10px;
     background-color: rgba(244, 244, 241, 1);
 }
+
+#finderModal {
+    & .modal-content {
+        @include modal-mixins.unfinished-modal-content;
+    }
+
+    & .finder-icon {
+        @include modal-mixins.modal-icons;
+    }
+
+    & .info-text {
+        @include modal-mixins.unfinished-modal-info;
+    }
+}
+
+#aboutModal {
+    & .modal-content {
+        @include modal-mixins.unfinished-modal-content;
+    }
+
+    & .monterey-icon {
+        @include modal-mixins.modal-icons;
+    }
+
+    & .info-text {
+        @include modal-mixins.unfinished-modal-info;   
+    }
+}
+
+#facetimeModal {
+    & .modal-content {
+        @include modal-mixins.unfinished-modal-content;
+    }
+
+    & .facetime-icon {
+        @include modal-mixins.modal-icons;
+    }
+
+    & .info-text {
+        @include modal-mixins.unfinished-modal-info;
+    }
+}
+
+#calculatorModal {
+    & .modal-content {
+        @include modal-mixins.unfinished-modal-content;
+    }
+
+    & .calculator-icon {
+        @include modal-mixins.modal-icons;
+    }
+
+    & .info-text {
+        @include modal-mixins.unfinished-modal-info;
+    }
+}
+
+
 
