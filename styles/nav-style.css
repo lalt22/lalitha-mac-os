@@ -1,44 +1,17 @@
-#navBar {
-  display: flex;
-  flex-direction: row;
-  visibility: visible;
-  position: fixed;
-  z-index: 10000;
-  width: 100%;
-  background-color: #ffe6e7;
-  height: 21px;
-  justify-content: space-between;
-  align-self: flex-start;
-  margin: 0;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use "./partials/nav-mixins";
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   nav-style.scss 1:1  root stylesheet */
 
-.nav-options {
-  display: flex;
-  flex-direction: row;
-  width: 33.3rem;
-}
-
-.flex-list {
-  display: flex;
-  list-style-type: none;
-  margin: 0px;
-  padding: 3px;
-}
-
-#iconNavOptions {
-  justify-content: flex-end;
-}
-
-li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.icon {
-  width: 15px;
-  height: 15px;
-}
-
-#iconNavOptions {
-  margin-right: 10px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"./partials/nav-mixins\";\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   nav-style.scss 1:1  root stylesheet";
 }
