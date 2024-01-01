@@ -1,3 +1,8 @@
+function closeAbout() {
+    var aboutModal = document.getElementById("aboutModal");
+    aboutModal.style.display = "none";
+}
+
 function closeFinder() {
     console.log("Closing Finder");
     var finderModal = document.getElementById("finderModal");

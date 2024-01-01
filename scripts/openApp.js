@@ -1,4 +1,9 @@
 
+function openAbout() {
+    var aboutModal = document.getElementById("aboutModal")
+    aboutModal.style.display = "block";
+}
+
 function openFinder() {
     console.log("Opening Finder");
     var finderModal = document.getElementById("finderModal");

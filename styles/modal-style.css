@@ -57,3 +57,95 @@
   margin-top: 10px;
   background-color: rgb(244, 244, 241);
 }
+
+#finderModal .modal-content {
+  flex-direction: column;
+  align-items: center;
+}
+#finderModal .finder-icon {
+  margin-top: 20px;
+}
+#finderModal .finder-icon img {
+  width: 250px;
+  height: 250px;
+}
+#finderModal .info-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#finderModal .info-text h1 {
+  font-weight: lighter;
+}
+#finderModal .info-text h4 {
+  font-weight: lighter;
+}
+
+#aboutModal .modal-content {
+  flex-direction: column;
+  align-items: center;
+}
+#aboutModal .monterey-icon {
+  margin-top: 20px;
+}
+#aboutModal .monterey-icon img {
+  width: 250px;
+  height: 250px;
+}
+#aboutModal .info-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#aboutModal .info-text h1 {
+  font-weight: lighter;
+}
+#aboutModal .info-text h4 {
+  font-weight: lighter;
+}
+
+#facetimeModal .modal-content {
+  flex-direction: column;
+  align-items: center;
+}
+#facetimeModal .facetime-icon {
+  margin-top: 20px;
+}
+#facetimeModal .facetime-icon img {
+  width: 250px;
+  height: 250px;
+}
+#facetimeModal .info-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#facetimeModal .info-text h1 {
+  font-weight: lighter;
+}
+#facetimeModal .info-text h4 {
+  font-weight: lighter;
+}
+
+#calculatorModal .modal-content {
+  flex-direction: column;
+  align-items: center;
+}
+#calculatorModal .calculator-icon {
+  margin-top: 20px;
+}
+#calculatorModal .calculator-icon img {
+  width: 250px;
+  height: 250px;
+}
+#calculatorModal .info-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#calculatorModal .info-text h1 {
+  font-weight: lighter;
+}
+#calculatorModal .info-text h4 {
+  font-weight: lighter;
+}

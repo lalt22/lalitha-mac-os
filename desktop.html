@@ -25,23 +25,67 @@
             <nav id="navBar" class="nav-bar">
                 <div id="textNavOptions" class="nav-options">
                     <ul id="textNav__list" class="flex-list">
-                        <li><img class="icon" src="icons/Apple.png" ></li>
-                        <li>Finder</li>
-                        <li>File</li>
-                        <li>Edit</li>
-                        <li>View</li>
-                        <li>Go</li>
-                        <li>Window</li>
-                        <li>Help</li>
+                        <li>  
+                            <a href="#all"><img class="icon" src="icons/Apple.png" alt="Apple Icon"></a>
+                            <ul class="menu__list about__list">
+                                <li><a href="#all" id="aboutBtn" class="about-btn" onclick="openAbout()">About This Mac</a></li>
+                                <li>System Preferences</li>
+                                <li>App Store</li>
+                                <li>Recent Items</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#all">Finder</a>
+                            <ul class="menu__list finder__list">
+                                <li>About Finder</li>
+                                <li>Preferences</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#all">File</a>
+                            <ul class="menu__list file__list">
+                                <li>New Finder Window</li>
+                                <li>New Folder</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#all">Edit</a>
+                            <ul class="menu__list edit__list">
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#all">View</a>
+                            <ul class="menu__list view__list">
+                                <li>Show View Options</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#all">Go</a>
+                            <ul class="menu__list go__list">
+                                <li>Go To Folder...</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#all">Window</a>
+                            <ul class="menu__list window__list">
+                               
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#all">Help</a>
+                            <ul class="menu__list help__list">
+                              
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div id="iconNavOptions" class="nav-options">
                     <ul id="iconNav__list" class="flex-list">
-                        <li><img class="icon" src="icons/speaker.3.fill.png"></li>
-                        <li><img class="icon" src="icons/battery.100.png"></li>
-                        <li><img class="icon" src="icons/wifi.png"></li>
-                        <li><img class="icon" src="icons/magnifyingglass.png"></li>
-                        <li><img class="icon" src="icons/controlcenter.png"></li>
+                        <li><img class="icon" src="icons/speaker.3.fill.png" alt="Volume"></li>
+                        <li><img class="icon" src="icons/battery.100.png" alt="Battery"></li>
+                        <li><img class="icon" src="icons/wifi.png" alt="WiFi"></li>
+                        <li><img class="icon" src="icons/magnifyingglass.png" alt="Search"></li>
+                        <li><img class="icon" src="icons/controlcenter.png" alt="Control Center"></li>
                         <li id="datetime" class="datetime"></li>
                     </ul>
                 </div>
@@ -95,8 +139,38 @@
                 </div>
                 <h1 id="finderTitle" class="title">Finder</h1>
             </div>
+            <div class="modal-content">
+                <div class="finder-icon">
+                    <img src="icons/finder.png" alt="Finder Icon">
+                </div>
+                <div class="info-text">
+                    <h1>Sorry!</h1>
+                    <h4>Finder is not available for this version of MacOS</h4>
+                </div>
+            </div>
         </div> 
-    
+        
+        <div id="aboutModal" class="modal ui-draggable">
+            <div class="modal-bar">
+                <div class="control-buttons">
+                    <a href="#notesModal" class="close" onclick="closeAbout()">close</a>
+                    <a href="#" class="minimise">minimise</a>
+                    <a href="#" class="fullScreen">fullscreen</a>
+                </div>
+                <div id="aboutTitle" class="title">About This Mac</div>
+            </div>
+            <div class="modal-content">
+                <div class="monterey-icon">
+                    <img src="icons/monterey.png" alt="MacOS Monterey Icon">
+                </div>
+                <div class="info-text">
+                    <h1>MacOS Monterey (Clone)</h1>
+                    <h4>Developed by Lalitha Seshadri</h4>
+                </div>
+            </div>
+        </div>
+
+
         <div id="notesModal" class="modal ui-draggable">
             <div class="modal-bar">
                 <div class="control-buttons">
@@ -183,6 +257,15 @@
                 </div>
                 <h1 id="facetimeTitle" class="title">FaceTime</h1>
             </div>
+            <div class="modal-content">
+                <div class="facetime-icon">
+                    <img src="icons/facetime.png" alt="FaceTime Icon">
+                </div>
+                <div class="info-text">
+                    <h1>Sorry!</h1>
+                    <h4>FaceTime is not available for this version of MacOS</h4>
+                </div>
+            </div>
         </div>
     
     
@@ -195,7 +278,15 @@
                 </div>
                 <h1 id="calculatorTitle" class="title">Calculator</h1>
             </div>
-            <div class="modal-content"></div>
+            <div class="modal-content">
+                <div class="calculator-icon">
+                    <img src="icons/calculator.png">
+                </div>
+                <div class="info-text">
+                    <h1>Sorry!</h1>
+                    <h4>Calculator is not available for this version of MacOS</h4>
+                </div>
+            </div>
             
         </div> 
         
