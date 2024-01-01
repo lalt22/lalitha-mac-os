@@ -1,7 +1,4 @@
 
-
-
-
 function openFinder() {
     console.log("Opening Finder");
     var finderModal = document.getElementById("finderModal");
@@ -12,6 +9,31 @@ function openNotes() {
     console.log("Opening Notes");
     var notesModal = document.getElementById("notesModal");
     notesModal.style.display = "block";
+
+    let notes = document.querySelectorAll('.note');
+        
+    notes.forEach(function(note) {
+        console.log("checking notes");
+        note.addEventListener('click', function() {
+            notes.forEach(function(note) {
+                note.classList.remove('focused');
+                note.classList.remove('selected');
+            });
+            this.classList.add('focused');
+        });
+    });
+        
+    window.addEventListener('click', function(e) {
+        if(!e.target.classList.contains('item')) {                
+            notes.forEach(function(note) {
+                if(note.classList.contains('focused')) {
+                    note.classList.remove('focused');
+                    note.classList.add('selected');
+                }
+            });
+        }
+    }, true);
+    
 }
 
 function openTerminal() {

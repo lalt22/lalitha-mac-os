@@ -7,11 +7,17 @@ window.onload = function() {
         var dateNum = newDate.getDate();
         var monthIndex = newDate.getMonth();
         var hour = newDate.getHours();
+        if (hour < 10) {
+            hour = "0" + hour;
+        }
+        
         var minute = newDate.getMinutes();
+        if (minute < 10) {
+            minute = "0" + minute;
+        }
         
     
         document.getElementById("datetime").innerHTML = `${days[dayIndex]} ${dateNum} ${months[monthIndex]} ${hour}:${minute}`;
-    
     }
 
     setInterval(updateDate, 1000);
